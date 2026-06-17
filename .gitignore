@@ -1,0 +1,19 @@
+# Your data — keep private, never upload
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Databases & local artifacts
+*.duckdb
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

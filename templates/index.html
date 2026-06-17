@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LTC Adaptive Dashboard</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>LTC Adaptive Dashboard</h1>
+        <div class="status" id="status-banner">Loading...</div>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button id="refresh-btn" title="Refresh now">↻</button>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button data-tab="dashboard">Dashboard</button>
+      <button data-tab="tracker">50-Lot Tracker</button>
+      <button data-tab="exit">Exit Comparison</button>
+    </nav>
+
+    <main>
+      <section id="panel-dashboard" class="tab-panel">
+        <div class="footnote">Loading dashboard...</div>
+      </section>
+
+      <section id="panel-tracker" class="tab-panel">
+        <div class="footnote">Loading tracker...</div>
+      </section>
+
+      <section id="panel-exit" class="tab-panel">
+        <div class="footnote">Loading exit comparison...</div>
+      </section>
+    </main>
+
+    <div class="footnote" style="margin-top: 24px;">
+      Live prices auto-refresh every 30 seconds. Weekly OHLC refreshes every 6 hours. State saved to <code>data/state.json</code>.
+      Data source: Binance (LTC/USDT) with CoinGecko fallback.
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+  <script src="/static/dashboard.js"></script>
+  <script src="/static/tracker.js"></script>
+  <script src="/static/exit-comparison.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.initApp().catch(err => {
+        console.error('Init failed:', err);
+        document.getElementById('status-banner').innerHTML = '<span style="color: var(--danger);">⚠ Init failed: ' + err.message + '</span>';
+      });
+    });
+  </script>
+</body>
+</html>
