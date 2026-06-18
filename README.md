@@ -2,11 +2,11 @@
 
 A local Python web app for running a long-term Litecoin accumulation strategy with live market data — combining live prices, auto-computed structural levels, a conviction-scoring model, position tracking with full cost modelling, and exit-strategy comparison. Runs entirely on your own machine: no cloud, no accounts, state stays local.
 
-> \*\*Decision-support, not auto-trading.\*\* The app surfaces live data and runs the analysis to inform sizing and timing — actual trades are placed in a broker, and positions shown are logged manually.
+> \\\*\\\*Decision-support, not auto-trading.\\\*\\\* The app surfaces live data and runs the analysis to inform sizing and timing — actual trades are placed in a broker, and positions shown are logged manually.
 
 
 
-!\[Dashboard screenshot](docs/screenshot.png)
+!\[Dashboard screenshot](Docs/screenshot.png)
 
 
 
@@ -76,7 +76,7 @@ Then open `http://localhost:5000`. On Windows, right-click `start.ps1` → **Run
 ## Customization
 
 * **Refresh interval** — in `static/app.js`, change the `30000` in `setInterval(() => window.refreshPrices(true), 30000)` (milliseconds).
-* **Price source** — in `server.py`, edit `api\_prices()`. The current order is Binance → CoinGecko fallback; you can swap in another JSON price API, or wire in a broker feed (e.g. MetaTrader 5 via `pip install MetaTrader5`, calling `mt5.symbol\_info\_tick(...)`) as a first option that falls back to the public APIs.
+* **Price source** — in `server.py`, edit `api\\\_prices()`. The current order is Binance → CoinGecko fallback; you can swap in another JSON price API, or wire in a broker feed (e.g. MetaTrader 5 via `pip install MetaTrader5`, calling `mt5.symbol\\\_info\\\_tick(...)`) as a first option that falls back to the public APIs.
 * **Strategy logic** — trigger zones, conditions, tranche structure, and exit strategies live in the `static/` widget files (`dashboard.js`, `tracker.js`, `exit-comparison.js`); all three share `app.js` for live data and state.
 
 ## Limitations
