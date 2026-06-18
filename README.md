@@ -86,11 +86,10 @@ Deliberately scoped as a single-user local tool:
 
 ## Why I built it
 
-*[Two honest sentences in your own words. A starting point to rewrite: I wanted to run a long-term LTC accumulation strategy off live data with consistent, rule-based decisions instead of ad-hoc ones, and to see equity, costs, and liquidation price update in real time.]*
+I wanted to run a long-term LTC accumulation strategy off live data with consistent, rule-based decisions instead of ad-hoc ones, and to see equity, costs, and liquidation price update in real time.
 
 ## What I learned
 
-*[Your words — keep the ones that are true, rewrite them how you'd actually say them:]*
 
 - *structuring a Flask app with clear separation between data, persistence, and presentation*
 - *the tradeoffs between running computation client-side vs server-side*
@@ -100,7 +99,6 @@ Deliberately scoped as a single-user local tool:
 
 ## What I'd do next
 
-*[Your words — real directions if you took it further:]*
 
 - *move the trusted logic server-side and add a database to support multiple users*
 - *candle-chart visualisation*
