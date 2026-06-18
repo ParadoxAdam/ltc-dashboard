@@ -91,16 +91,16 @@ I wanted to run a long-term LTC accumulation strategy off live data with consist
 ## What I learned
 
 
-- *structuring a Flask app with clear separation between data, persistence, and presentation*
-- *the tradeoffs between running computation client-side vs server-side*
-- *handling live APIs gracefully — fallbacks, timeouts, caching, and rate limits*
-- *keeping state in sync between the browser and a file on disk*
-- *polling and updating the DOM without reloading the page*
+- *structuring a Flask app with clear separation between data, persistence, and presentation
+- *the tradeoffs between running computation client-side vs server-side
+- *handling live APIs gracefully — fallbacks, timeouts, caching, and rate limits
+- *keeping state in sync between the browser and a file on disk
+- *polling and updating the DOM without reloading the page
 
 ## What I'd do next
 
 
-- *move the trusted logic server-side and add a database to support multiple users*
-- *candle-chart visualisation*
-- *direct MT5 broker integration for live positions*
-- *automated tests around the cost and scoring logic*
+- *move the trusted logic server-side and add a database to support multiple users
+- *candle-chart visualisation
+- *direct MT5 broker integration for live positions
+- *automated tests around the cost and scoring logic
